@@ -39,7 +39,7 @@ func init() {
 
 	rAuditCmd.Flags().String("project", "", "The target project root.")
 	rAuditCmd.Flags().String("out", "", "The location for the json report to be outputted.")
-	rAuditCmd.Flags().Bool("rpackagelock", true, "set to true if npm should require package-lock.json file if set to false may cause inconsistent behavior as project is rebuilt by npm")
+	rAuditCmd.Flags().Bool("rpackagelock", true, "When true npm audit will only be run on package lock file found in the target project. When false a package lock file will be create and then npm audit will be run.")
 
 	rAuditCmd.MarkFlagRequired("project")
 	rAuditCmd.MarkFlagRequired("out")

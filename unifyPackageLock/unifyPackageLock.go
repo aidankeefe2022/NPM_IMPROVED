@@ -17,7 +17,22 @@ func runNpmAudit(targetDir string, packageLockReq bool) ([]byte, error) {
 	if packageLockReq {
 		cmd = exec.Command("npm", "audit", "--json")
 	} else {
-		cmd = exec.Command("npm", "audit", "--no-package-lock", "--json")
+		if entries, err := os.ReadDir(targetDir); err != nil {
+			fmt.Println(err)
+		} else {
+			count := 0
+			for _, entry := range entries {
+				if entry.Name() == "package-lock.json" {
+					count++
+				}
+			}
+			if count != 0 {
+				cmdFirst := exec.Command("npm", "i", "--package-lock-only", "--force")
+				cmdFirst.Dir = targetDir
+				_, _ = cmdFirst.Output()
+			}
+		}
+		cmd = exec.Command("npm", "audit", "--json")
 	}
 	cmd.Dir = targetDir
 	output, _ := cmd.Output()
