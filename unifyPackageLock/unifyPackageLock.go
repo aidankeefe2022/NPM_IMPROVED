@@ -26,7 +26,7 @@ func runNpmAudit(targetDir string, packageLockReq bool) ([]byte, error) {
 					count++
 				}
 			}
-			if count != 0 {
+			if count == 0 {
 				cmdFirst := exec.Command("npm", "i", "--package-lock-only", "--force")
 				cmdFirst.Dir = targetDir
 				_, _ = cmdFirst.Output()
@@ -65,7 +65,7 @@ func CombinedOutputNpmAudit(targetDirs []string, outputPath string, packageLockR
 		fmt.Println("Issue while marshaling json data from npm reports: ", err.Error())
 		return err
 	}
-	if err := os.WriteFile(outputPath+"/npm.json", data, 0644); err != nil {
+	if err := os.WriteFile(outputPath, data, 0644); err != nil {
 		fmt.Println("error while writing to file", err.Error())
 		os.Exit(1)
 	}
