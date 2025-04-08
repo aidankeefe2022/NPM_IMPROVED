@@ -1,4 +1,5 @@
-module NPM_IMPROVED
+module github.com/aidankeefe2022/NPM_IMPROVED
+
 
 go 1.22
 

@@ -4,7 +4,7 @@ Copyright © 2025 NAME HERE <EMAIL ADDRESS>
 package main
 
 import (
-	"NPM_IMPROVED/cmd"
+	"github.com/aidankeefe2022/NPM_IMPROVED/cmd"
 )
 
 func main() {
