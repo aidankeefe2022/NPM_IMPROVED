@@ -66,7 +66,7 @@ func CombinedOutputNpmAudit(targetDirs []string, outputPath string, packageLockR
 	for _, report := range reports[:1] {
 		reports[0].Combine(&report)
 	}
-	data, err := json.MarshalIndent(reports, "", "   ")
+	data, err := json.MarshalIndent(reports[0], "", "   ")
 	if err != nil {
 		fmt.Println("Issue while marshaling json data from npm reports: ", err.Error())
 		return err
