@@ -42,9 +42,9 @@ func runNpmAudit(targetDir string, packageLockReq bool) ([]byte, error) {
 	return output, nil
 }
 
-func CombinedOutputNpmAudit(targetDir []string, outputPath string, packageLockReq bool) error {
-	reports := make([]NpmReport, len(targetDir))
-	for i, dir := range targetDir {
+func CombinedOutputNpmAudit(targetDirs []string, outputPath string, packageLockReq bool) error {
+	reports := make([]NpmReport, len(targetDirs))
+	for i, dir := range targetDirs {
 		reports[i] = NpmReport{}
 		output, err := runNpmAudit(dir, packageLockReq)
 		if err != nil {

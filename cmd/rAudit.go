@@ -10,6 +10,7 @@ import (
 )
 
 // rAuditCmd represents the rAudit command
+// we do not need to clear the output file before a run because PIQUE WEB handles this case by deleting the temp file before running this tool
 var rAuditCmd = &cobra.Command{
 	Use:   "rAudit",
 	Short: "Searches down file tree for dependencies of the project and audits them",
