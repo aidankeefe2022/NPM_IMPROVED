@@ -4,8 +4,8 @@ Copyright © 2025 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"NPM_IMPROVED/unifyPackageLock"
 	"fmt"
+	"github.com/aidankeefe2022/NPM_IMPROVED/unifyPackageLock"
 	"github.com/spf13/cobra"
 )
 
