@@ -29,13 +29,19 @@ func runNpmAudit(targetDir string, packageLockReq bool) ([]byte, error) {
 			if count == 0 {
 				cmdFirst := exec.Command("npm", "i", "--package-lock-only", "--force")
 				cmdFirst.Dir = targetDir
-				_, _ = cmdFirst.Output()
+				_, err = cmdFirst.CombinedOutput()
+				if err != nil {
+					fmt.Println(err)
+				}
 			}
 		}
 		cmd = exec.Command("npm", "audit", "--json")
 	}
 	cmd.Dir = targetDir
-	output, _ := cmd.Output()
+	output, err := cmd.CombinedOutput()
+	if err != nil {
+		fmt.Println(err)
+	}
 	if len(output) == 0 {
 		return output, errors.New(fmt.Sprint("NPM output is empty"))
 	}
@@ -60,7 +66,7 @@ func CombinedOutputNpmAudit(targetDirs []string, outputPath string, packageLockR
 	for _, report := range reports[:1] {
 		reports[0].Combine(&report)
 	}
-	data, err := json.Marshal(reports)
+	data, err := json.MarshalIndent(reports, "", "   ")
 	if err != nil {
 		fmt.Println("Issue while marshaling json data from npm reports: ", err.Error())
 		return err
