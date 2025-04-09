@@ -1,0 +1,236 @@
+{
+   "vulnerabilities": {
+      "axios": {
+         "effects": [],
+         "fixAvailable": true,
+         "isDirect": true,
+         "name": "axios",
+         "nodes": [
+            "node_modules/axios"
+         ],
+         "range": "1.0.0 - 1.8.1",
+         "severity": "high",
+         "via": [
+            {
+               "cvss": {
+                  "score": 0,
+                  "vectorString": null
+               },
+               "cwe": [
+                  "CWE-918"
+               ],
+               "dependency": "axios",
+               "name": "axios",
+               "range": "\u003e=1.0.0 \u003c1.8.2",
+               "severity": "high",
+               "source": 1103618,
+               "title": "axios Requests Vulnerable To Possible SSRF and Credential Leakage via Absolute URL",
+               "url": "https://github.com/advisories/GHSA-jr5f-v2jv-69x6"
+            }
+         ]
+      },
+      "cross-spawn": {
+         "effects": [],
+         "fixAvailable": true,
+         "isDirect": false,
+         "name": "cross-spawn",
+         "nodes": [
+            "node_modules/cross-spawn"
+         ],
+         "range": "7.0.0 - 7.0.4",
+         "severity": "high",
+         "via": [
+            {
+               "cvss": {
+                  "score": 7.5,
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+               },
+               "cwe": [
+                  "CWE-1333"
+               ],
+               "dependency": "cross-spawn",
+               "name": "cross-spawn",
+               "range": "\u003e=7.0.0 \u003c7.0.5",
+               "severity": "high",
+               "source": 1100563,
+               "title": "Regular Expression Denial of Service (ReDoS) in cross-spawn",
+               "url": "https://github.com/advisories/GHSA-3xgq-45jj-v275"
+            }
+         ]
+      },
+      "micromatch": {
+         "effects": [],
+         "fixAvailable": true,
+         "isDirect": false,
+         "name": "micromatch",
+         "nodes": [
+            "node_modules/micromatch"
+         ],
+         "range": "\u003c4.0.8",
+         "severity": "moderate",
+         "via": [
+            {
+               "cvss": {
+                  "score": 5.3,
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+               },
+               "cwe": [
+                  "CWE-1333"
+               ],
+               "dependency": "micromatch",
+               "name": "micromatch",
+               "range": "\u003c4.0.8",
+               "severity": "moderate",
+               "source": 1098681,
+               "title": "Regular Expression Denial of Service (ReDoS) in micromatch",
+               "url": "https://github.com/advisories/GHSA-952p-6rrq-rcjv"
+            }
+         ]
+      },
+      "nanoid": {
+         "effects": [],
+         "fixAvailable": true,
+         "isDirect": false,
+         "name": "nanoid",
+         "nodes": [
+            "node_modules/nanoid"
+         ],
+         "range": "\u003c3.3.8",
+         "severity": "moderate",
+         "via": [
+            {
+               "cvss": {
+                  "score": 4.3,
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+               },
+               "cwe": [
+                  "CWE-835"
+               ],
+               "dependency": "nanoid",
+               "name": "nanoid",
+               "range": "\u003c3.3.8",
+               "severity": "moderate",
+               "source": 1101163,
+               "title": "Predictable results in nanoid generation when given non-integer values",
+               "url": "https://github.com/advisories/GHSA-mwcw-c2x4-8c55"
+            }
+         ]
+      },
+      "next": {
+         "effects": [],
+         "fixAvailable": {
+            "isSemVerMajor": false,
+            "name": "next",
+            "version": "14.2.28"
+         },
+         "isDirect": true,
+         "name": "next",
+         "nodes": [
+            "node_modules/next"
+         ],
+         "range": "9.5.5 - 14.2.24",
+         "severity": "critical",
+         "via": [
+            {
+               "cvss": {
+                  "score": 7.5,
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+               },
+               "cwe": [
+                  "CWE-349",
+                  "CWE-639"
+               ],
+               "dependency": "next",
+               "name": "next",
+               "range": "\u003e=14.0.0 \u003c14.2.10",
+               "severity": "high",
+               "source": 1099638,
+               "title": "Next.js Cache Poisoning",
+               "url": "https://github.com/advisories/GHSA-gp8f-8m3g-qvj9"
+            },
+            {
+               "cvss": {
+                  "score": 5.9,
+                  "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+               },
+               "cwe": [
+                  "CWE-674"
+               ],
+               "dependency": "next",
+               "name": "next",
+               "range": "\u003e=10.0.0 \u003c14.2.7",
+               "severity": "moderate",
+               "source": 1100421,
+               "title": "Denial of Service condition in Next.js image optimization",
+               "url": "https://github.com/advisories/GHSA-g77x-44xx-532m"
+            },
+            {
+               "cvss": {
+                  "score": 7.5,
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+               },
+               "cwe": [
+                  "CWE-285"
+               ],
+               "dependency": "next",
+               "name": "next",
+               "range": "\u003e=9.5.5 \u003c14.2.15",
+               "severity": "high",
+               "source": 1101380,
+               "title": "Next.js authorization bypass vulnerability",
+               "url": "https://github.com/advisories/GHSA-7gfc-8cq8-jh5f"
+            },
+            {
+               "cvss": {
+                  "score": 5.3,
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+               },
+               "cwe": [
+                  "CWE-770"
+               ],
+               "dependency": "next",
+               "name": "next",
+               "range": "\u003e=14.0.0 \u003c14.2.21",
+               "severity": "moderate",
+               "source": 1101438,
+               "title": "Next.js Allows a Denial of Service (DoS) with Server Actions",
+               "url": "https://github.com/advisories/GHSA-7m27-7ghc-44w9"
+            },
+            {
+               "cvss": {
+                  "score": 9.1,
+                  "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N"
+               },
+               "cwe": [
+                  "CWE-285"
+               ],
+               "dependency": "next",
+               "name": "next",
+               "range": "\u003e=14.0.0 \u003c14.2.25",
+               "severity": "critical",
+               "source": 1103622,
+               "title": "Authorization Bypass in Next.js Middleware",
+               "url": "https://github.com/advisories/GHSA-f82v-jwr5-mffw"
+            }
+         ]
+      }
+   },
+   "metadata": {
+      "dependencies": {
+         "dev": 344,
+         "optional": 7,
+         "peer": 1,
+         "peerOptional": 0,
+         "prod": 198,
+         "total": 548
+      },
+      "vulnerabilities": {
+         "critical": 1,
+         "high": 2,
+         "info": 0,
+         "low": 0,
+         "moderate": 2,
+         "total": 5
+      }
+   }
+}

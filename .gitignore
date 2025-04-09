@@ -1,4 +1,3 @@
-testResources
 .idea
 .code
-unifyPackageLock/unifyPackageLock_test.go
+testResources/fed-website.b
