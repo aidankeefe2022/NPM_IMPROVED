@@ -1,0 +1,73 @@
+.newsletter__form {
+    width: 90%;
+}
+
+.newsletter__form__email {
+    /* override rule in flex class */
+    height: auto;
+
+    padding: 0.3rem;
+    border-radius: 999rem;
+    background: white;
+}
+
+.newsletter__form__email__your_email {
+    border-radius: 999rem;
+    border: none;
+    margin: 0;
+}
+
+.newsletter__form__email__submit_btn {
+    border-radius: 999rem;
+    width: auto;
+    margin: 0;
+}
+
+.newsletter__form__email_copy {
+    gap: 0.5rem;
+}
+
+.newsletter__form__email_copy>* {
+    height: auto;
+    width: auto;
+}
+
+.newsletter__form__email_copy__label {
+    font-family: system-ui, sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+}
+
+.newsletter__form__email_copy__check_box {
+    display: grid;
+    place-content: center;
+    appearance: none;
+    padding: 0.6rem;
+    margin: 0;
+    /* push to the right */
+    margin-left: auto;
+    width: 0.45rem;
+    height: 0.45rem;
+    border: none;
+    border-radius: 999rem;
+    font: inherit;
+    color: currentColor;
+    background-color: #fff;
+}
+
+.newsletter__form__email_copy__check_box::before {
+    content: "";
+    width: 0.45em;
+    height: 0.45em;
+    transform: scale(0);
+    border-radius: 999rem;
+    background-color: var(--primary-color);
+    transition: 120ms transform ease-in-out;
+}
+
+.newsletter__form__email_copy__check_box:checked::before {
+    transform: scale(1);
+}
