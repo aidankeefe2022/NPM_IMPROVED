@@ -4,6 +4,7 @@ Copyright © 2025 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -26,6 +27,7 @@ NPM_IMPROVED rAudit --project "PATH" --output "PATH"`,
 func Execute() {
 	err := rootCmd.Execute()
 	if err != nil {
+		fmt.Println(err.Error(), "Error in root")
 		os.Exit(1)
 	}
 }

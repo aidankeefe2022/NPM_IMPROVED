@@ -73,7 +73,7 @@ func CombinedOutputNpmAudit(targetDirs []string, outputPath string, packageLockR
 	}
 	if err := os.WriteFile(outputPath, data, 0644); err != nil {
 		fmt.Println("error while writing to file", err.Error())
-		os.Exit(1)
+		return err
 	}
 	return nil
 }

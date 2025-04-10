@@ -81,3 +81,14 @@ func TestCombinedOutputNpmAuditFedWebsite(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestGetTargetDirs(t *testing.T) {
+	fmt.Println("Running TestGetTargetDirs...")
+	list, err := GetTargetDirs("/home/aidan/LAB/NPM_IMPROVED/testResources/Noteslify.b", "package.json")
+	if err != nil {
+		t.Error("error while getting target dirs", err.Error())
+	}
+	if len(list) != 5 {
+		t.Error("expected target dirs to be 4")
+	}
+}
