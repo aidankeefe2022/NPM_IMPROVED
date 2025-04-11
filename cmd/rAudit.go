@@ -16,8 +16,7 @@ var rAuditCmd = &cobra.Command{
 	Short: "Searches down file tree for dependencies of the project and audits them",
 	Long: `The rAudit command searches down file tree for dependencies of the project and audits them.
 
-	NPM_IMPROVED rAudit --project 'path' --out 'path' --rpackagelock ('true'|'false')
-	
+	NPM_IMPROVED rAudit --project 'path' --out 'path' --rpackagelock=('true'|'false')
 
 `,
 	Run: func(cmd *cobra.Command, args []string) {
