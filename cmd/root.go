@@ -15,11 +15,10 @@ var rootCmd = &cobra.Command{
 	Use:   "NPM_IMPROVED",
 	Short: "A tool to allow npm audit to be run down a project file path and allow for targeting of projects and specified output.",
 	Long: `A tool to allow npm audit to be run down a project file path and allow for targeting of projects and specified output.
+	
+To learn more run NPM_IMPROVED 'subcommand' -h
 
-NPM_IMPROVED rAudit --project "PATH" --output "PATH"`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
